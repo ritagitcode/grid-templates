@@ -1,0 +1,383 @@
+*  {
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+
+h2 {
+    font-family: 'Bely Display', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 64px;
+    line-height: 64px;
+}
+
+.main_description, .main_button, .start_button, .advantages_description,
+.advantages_item-1_name, .advantages_item-2_name, .advantages_item-3_name,
+.advantages_item-1_desc, .advantages_item-2_desc, .advantages_item-3_desc, 
+.startup_description, .investment_description, .contributors_description, 
+.improve_description, .improve_button, .start_description {
+    font-family: 'Proxima Nova', sans-serif;
+    font-style: normal;
+}
+
+
+.overall_grid-container {
+    display: grid;
+    grid-template: repeat(2, min-content) repeat(7, 1fr min-content) / 56px repeat(6, 1fr) 56px;
+    /* общий грид-контейнер для всего макета */
+}
+
+.header {
+    grid-area: 1 / 2 / 2 / 8;
+}
+
+.header_ul, .footer_ul {
+    display: grid;
+    align-items: center;
+    grid-template: 1fr / fit-content(282px) 1fr fit-content(182px) 
+    fit-content(75px) fit-content(91px) fit-content(182px);
+    column-gap: 120px;
+    margin-top: 40px;
+}
+
+.header_li_logo, .footer_signature {
+    display: flex;
+    align-items: flex-start;
+    font-family: 'FuturaRoundW01-Demi', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 43px;
+    letter-spacing: -0.04em;
+}
+
+.header_li_item-1, .header_li_item-2, .header_li_item-3, .header_li_item-4,
+.footer_li_item-1, .footer_li_item-2, .footer_li_item-3, .footer_li_item-4 {
+    font-family: 'Proxima Nova', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+}
+
+.header_li_item-1, .header_li_item-2, .header_li_item-3,
+.footer_li_item-1, .footer_li_item-2, .footer_li_item-3 {
+    font-weight: 500;
+}
+
+.header_li_img {
+    margin-right: 8px;
+}
+
+.header_li_item-1, .footer_li_item-1 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.header_li_item-2, .footer_li_item-2 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.header_li_item-3, .footer_li_item-3 {
+    grid-area: 1 / 5 / 2 / 6;
+}
+
+.header_li_item-4, .footer_li_item-4 {
+    grid-area: 1 / 6 / 2 / 7;
+    font-weight: 700;
+    color: #71A894;
+}
+
+.main {
+    display: grid;
+    grid-area: 2 / 2 / 3 / 10;
+    grid-template: 300px 320px 100px 60px 60px 60px / 1fr min-content;
+}
+
+.main_h1 {
+    grid-area: 2 / 1 / 3 / 2;
+    display: grid;
+    align-content: center;
+    margin: 0px;
+    font-family: 'Bely Display', sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 48px;
+    line-height: 120px;
+}
+
+.main_description {
+    grid-area: 4 / 1 / 5 / 2;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+
+letter-spacing: -0.02em;
+}
+
+.main_button {
+    grid-area: 6 / 1 / 7 / 2;
+}
+
+.main_img {
+    grid-area: 1 / 2 / 8 / 3;
+}
+
+.main_button, .start_button {
+    width: 219px;
+    height: 64px;
+    background-color: #71A894;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+}
+
+.advantages {
+    grid-area: 4 / 2 / 5 / 8;
+    display: grid;
+    grid-template: 100px 150px 500px / auto auto auto;
+    align-items: center;
+    justify-items: center;
+    column-gap: 24px;
+    /* почему-то не работает content, только items */
+    text-align: center;
+}
+
+.advantages_h2 {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.advantages_description {
+    grid-area: 2 / 1 / 3 / 4;
+    width: 895px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+    
+}
+
+.advantages_item-1 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.advantages_item-2 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.advantages_item-3 {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+.advantages_item-1, .advantages_item-2, .advantages_item-3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    height: 440px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+}
+
+.advantages_item-1_img, .advantages_item-2_img, .advantages_item-3_img {
+    margin-bottom: 50px;
+}
+.advantages_item-1_name, .advantages_item-2_name, .advantages_item-3_name {
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+}
+
+.advantages_item-1_desc, .advantages_item-2_desc, .advantages_item-3_desc {
+    width: 379px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.startup {
+    grid-area: 6 / 2 / 7 / 8;
+    display: grid;
+    grid-template: 250px 120px 200px 100px 50px / auto auto;
+    align-items: center;
+    justify-items: start;
+    column-gap: 200px;
+}
+
+.startup_icon {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.startup_h2 {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 844px;
+}
+
+.startup_description {
+    grid-area: 4 / 1 / 5 / 2;
+    width: 744px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.startup_members_img {
+    grid-area: 2 / 2 / 5 / 3;
+}
+
+.investment {
+    grid-area: 8 / 2 / 9 / 8;
+    display: grid;
+    grid-template: 250px 120px 200px 100px 50px / auto auto;
+    align-items: center;
+    justify-items: start;
+    column-gap: 200px;
+}
+
+.investment_icon {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+
+.investment_members_img {
+    grid-area: 2 / 1 / 5 / 2;
+}
+
+.investment_h2 {
+    grid-area: 3 / 2 / 4 / 3;
+    width: 844px;
+}
+
+.investment_description {
+    grid-area: 4 / 2 / 5 / 3;
+    width: 744px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.contributors {
+    grid-area: 10 / 2 / 11 / 8;
+    display: grid;
+    grid-template: 250px 120px 200px 100px 50px / auto auto;
+    align-items: center;
+    justify-items: start;
+    column-gap: 200px;
+}
+
+.contributors_icon {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.contributors_h2 {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 844px;
+}
+
+.contributors_description {
+    grid-area: 4 / 1 / 5 / 2;
+    width: 744px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.contributors_members_img {
+    grid-area: 2 / 2 / 5 / 3;
+}
+
+.improve {
+    grid-area: 12 / 2 / 13 / 8;
+    display: grid;
+    grid-template: 250px 120px 90px 1fr 100px 44px 72px / auto auto auto;
+    align-items: start;
+    justify-items: center;
+    column-gap: 24px;
+    row-gap: 50px;
+    /* почему-то не работает content, только items */
+    text-align: center;
+}
+
+.improve_h2 {
+    grid-area: 2 / 1 / 3 / 4;
+}
+
+.improve_description {
+    grid-area: 3 / 1 / 4 / 4;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.impove_item-1 {
+    grid-area: 4 / 1 / 5 / 2;
+}
+
+.impove_item-2 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+.impove_item-3 {
+    grid-area: 4 / 3 / 5 / 4;
+}
+
+.improve_button {
+    grid-area: 5 / 1 / 6 / 4;
+    width: 136px;
+    height: 64px;
+    background-color: black;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+}
+
+.divider {
+    grid-area: 13 / 1 / 14 / 9;
+}
+
+.start {
+    grid-area: 14 / 2 / 15 / 8;
+    display: grid;
+    grid-template: 100px min-content min-content 70px 83px / auto auto;
+    align-content: center;
+    column-gap: 200px;
+}
+
+.start_h2 {
+    grid-area: 2 / 1 / 3 / 2;
+    width: 844px;
+}
+
+.start_description {
+    grid-area: 3 / 1 / 4 / 2;
+    width: 744px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
+}
+
+.start_button {
+    grid-area: 5 / 1 / 6 / 2;
+}
+
+.start_img {
+    grid-area: 2 / 2 / 8 / 3;
+}
+
+.footer {
+    grid-area: 16 / 2 / 17 / 8;
+    margin-bottom: 40px;
+}
